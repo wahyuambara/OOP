@@ -1,24 +1,34 @@
 package id.ac.undiksha.ais.people;
 
-public class lecture {
-	private String name;
+public class lecture extends Human{
 	private String lectureId; 
-	private boolean gender; // 0 = female, 1 = male
-	private String address;
-	private String birthDate;
 	private String faculty;
 	private String department;
 	private String studyProgram;
 	
-	public String getName() {
-		return name;
+	public lecture() {
+		this.lectureId = "insert id";
+		this.faculty = "inser";
+		this.department = "inser";
+		this.studyProgram = "insert";
 	}
-
-
-	public void setName(String name) {
-		this.name = name;
+	
+	
+	public lecture(
+			String name, 
+			String birthDate, 
+			boolean gender, 
+			String address, 
+			String lectureId, 
+			String faculty,
+			String department, 
+			String studyProgram) {
+		super(name, birthDate, gender, address);
+		this.lectureId = lectureId;
+		this.faculty = faculty;
+		this.department = department;
+		this.studyProgram = studyProgram;
 	}
-
 
 	public String getLectureId() {
 		return lectureId;
@@ -27,36 +37,6 @@ public class lecture {
 
 	public void setLectureId(String lectureId) {
 		this.lectureId = lectureId;
-	}
-
-
-	public boolean isGender() {
-		return gender;
-	}
-
-
-	public void setGender(boolean gender) {
-		this.gender = gender;
-	}
-
-
-	public String getAddress() {
-		return address;
-	}
-
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-
-	public String getBirthDate() {
-		return birthDate;
-	}
-
-
-	public void setBirthDate(String birthDate) {
-		this.birthDate = birthDate;
 	}
 
 
@@ -78,7 +58,8 @@ public class lecture {
 	public void setDepartment(String department) {
 		this.department = department;
 	}
-	
+
+
 	public String getStudyProgram() {
 		return studyProgram;
 	}
@@ -90,16 +71,8 @@ public class lecture {
 
 
 	public void printAll() {
-		
-		System.out.println(this.name);
+		super.printAll();
 		System.out.println(this.lectureId);
-		if (this.gender) {
-			System.out.println("Male");
-		} else {
-			System.out.println("Female");
-		}
-		System.out.println(this.address);
-		System.out.println(this.birthDate);
 		System.out.println(this.faculty);
 		System.out.println(this.department);
 		System.out.println(this.studyProgram);
