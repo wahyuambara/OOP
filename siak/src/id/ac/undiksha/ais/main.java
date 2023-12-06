@@ -1,6 +1,7 @@
 package id.ac.undiksha.ais;
-import id.ac.undiksha.ais.people.student;
-import id.ac.undiksha.ais.people.lecture;
+//import id.ac.undiksha.ais.people.student;
+import id.ac.undiksha.ais.people.*;
+//import id.ac.undiksha.ais.people.lecture;
 public class main {
 
 	public static void main(String[] args) {
@@ -49,8 +50,16 @@ public class main {
 				"TI",
 				"CS"
 				);
+		
 		lec1.printAll();
-
-	}
+		//student student4 = new Human();
+		Human human1 = new student();
+		human1.setName(null);
+		human1.printAll();
+		//Human human2 = new Human();
+		student3.prodi.setStudyProgramId(null);
+		student3.prodi.setDepartmentName(null);
+		student3.prodi.getFacultyCode();
+		}
 
 }

@@ -1,6 +1,6 @@
 package id.ac.undiksha.ais.people;
 
-public class Human {
+public abstract class Human {
 	private String name;
 	private String birthDate;
 	private boolean gender; // 0 = female, 1 = male
